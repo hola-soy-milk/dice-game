@@ -1,8 +1,10 @@
 export default class DieWrapper {
   die: Die;
+  sides: number;
 
-  constructor() {
-    let value : number = Math.floor(Math.random() * 6);
+  constructor(sides: number = 6) {
+    let value : number = Math.floor(Math.random() * sides) + 1;
+    this.sides = sides;
     this.die = this.dieForValue(value)
   }
 
@@ -11,7 +13,7 @@ export default class DieWrapper {
   }
 
   roll() {
-    let value : number = Math.floor(Math.random() * 6);
+    let value : number = Math.floor(Math.random() * this.sides) + 1;
     this.die = this.dieForValue(value)
   }
 
@@ -29,6 +31,10 @@ export default class DieWrapper {
         return new FiveDie();
       case 6:
         return new SixDie();
+      case 7:
+        return new SevenDie();
+      case 8:
+        return new EightDie();
       default:
         return new OneDie();
     }
@@ -68,5 +74,15 @@ class FiveDie extends Die {
 class SixDie extends Die {
     value() {
         return 6;
+    }
+}
+class SevenDie extends Die {
+    value() {
+        return 7;
+    }
+}
+class EightDie extends Die {
+    value() {
+        return 8;
     }
 }
