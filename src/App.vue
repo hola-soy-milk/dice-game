@@ -50,6 +50,7 @@ button {
   font-weight: 600;
   padding: 1em 2em;
   cursor: pointer;
+  margin: 0;
   }
 button:hover {
   filter: brightness(115%);
