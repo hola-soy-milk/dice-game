@@ -10,7 +10,7 @@ export default class DieWrapper {
 
   value() : number {
     if (this.die instanceof Die) {
-      this.die.value();
+      return this.die.value();
     }
     return 0;
   }
