@@ -16,7 +16,7 @@ a {
 span {
   color: #000;
   margin: 0;
-  font-size: 5em;
+  font-size: 3em;
   }
 
 label {

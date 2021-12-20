@@ -18,7 +18,7 @@ a {
 }
 
 .rim {
-  padding: 0.5em 2em;
+  padding: 0.75em 2em;
   background-color: #ffffff;
   border-color: #000;
   border-radius: 1em;
