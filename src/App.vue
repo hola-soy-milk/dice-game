@@ -10,7 +10,7 @@ const dice = ref(roll());
 
 <template>
   <h1 class="top">¡Juguemos al 21!</h1>
-  <div class="flex center">
+  <div class="grid center">
     <Die v-for="die in dice" :faceValue="die.value()"/>
   </div>
   <h1>
@@ -18,7 +18,7 @@ const dice = ref(roll());
     <span v-if="dice.reduce((sum, die) => sum + die.value(), 0) < 21">🎉</span>
     <span v-else>😥</span>
   </h1>
-  <button type="button" @click="dice = roll()">Reroll</button>
+  <button type="button" @click="dice = roll()">Tirar los dados</button>
 </template>
 
 <style>
@@ -57,10 +57,18 @@ button:hover {
 button:active {
   filter: brightness(85%);
   }
-.flex {
-  display: flex;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4em;
+  }
+}
+
 .center {
-  justify-content: space-around;
+  justify-items: center;
 }
 </style>
