@@ -5,13 +5,19 @@ defineProps<{ value: number }>()
 </script>
 
 <template>
-  <h1>{{ value }}</h1>
+  <span>{{ value }}</span>
 </template>
 
 <style scoped>
 a {
   color: #42b983;
 }
+ 
+span {
+  color: #000;
+  margin: 0;
+  font-size: 5em;
+  }
 
 label {
   margin: 0 0.5em;

@@ -9,11 +9,9 @@ const dice = ref(roll());
 </script>
 
 <template>
-  <div>
-    <h1 class="top">¡Juguemos al 21!</h1>
-    <div class="flex center">
-      <Die v-for="die in dice" :faceValue="die.value()"/>
-    </div>
+  <h1 class="top">¡Juguemos al 21!</h1>
+  <div class="flex center">
+    <Die v-for="die in dice" :faceValue="die.value()"/>
   </div>
   <h1>
     {{dice.reduce((sum, die) => sum + die.value(), 0)}}
@@ -63,6 +61,6 @@ button:active {
   display: flex;
 }
 .center {
-  justify-content: center;
+  justify-content: space-around;
 }
 </style>

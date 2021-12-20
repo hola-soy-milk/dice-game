@@ -17,6 +17,14 @@ a {
   color: #42b983;
 }
 
+.rim {
+  padding: 0.5em 2em;
+  background-color: #ffffff;
+  border-color: #000;
+  border-radius: 1em;
+  border-style: solid;
+  }
+
 label {
   margin: 0 0.5em;
   font-weight: bold;
